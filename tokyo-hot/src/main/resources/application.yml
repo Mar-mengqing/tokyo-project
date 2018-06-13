@@ -1,0 +1,29 @@
+server:
+  port: 9999
+spring:
+  datasource:
+    name: mysql
+    url: jdbc:mysql://localhost:3306/crm
+    username: root
+    password: 111111
+  mvc:
+    view:
+      prefix: WEB-INF/view/
+      suffix: .jsp
+  thymeleaf:
+    cache: false
+    enabled: false
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.baizhi.crm.entity
+
+# JWT token属性值
+jwt:
+  header: Authorization
+  secret: s5u6Q1A5d48
+  tokenHead: "Bearer "
+  expiration: 180000
+
+
+
